@@ -1,4 +1,4 @@
-FROM fedora:20
+FROM fedora:22
 
 MAINTAINER Kaushal M <kshlmster@gmail.com>
 
@@ -8,7 +8,6 @@ ADD ./setup.sh /build/setup.sh
 RUN chmod +x /build/setup.sh
 RUN /build/setup.sh
 
-COPY ./sshd.ini /etc/supervisord.d/sshd.ini
 COPY ./bashrc /home/user/.bashrc
 
-CMD /usr/bin/supervisord
+CMD /usr/sbin/sshd -D

@@ -1,6 +1,6 @@
 #! /bin/bash
 
-yum install -y golang gdb tmux openssh-server sudo supervisor
+dnf install -y golang gdb tmux openssh-server sudo
 
 ssh-keygen -A
 
@@ -11,5 +11,5 @@ mkdir -p /home/user/go
 echo "user:password" | chpasswd
 echo "root:password" | chpasswd
 
-mkdir -p /var/run/sshd /var/log/supervisor
+mkdir -p /var/run/sshd
 
