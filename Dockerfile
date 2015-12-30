@@ -1,4 +1,4 @@
-FROM fedora:23
+FROM kshlm/vagrant-fedora:latest
 
 MAINTAINER Kaushal M <kshlmster@gmail.com>
 
@@ -8,6 +8,4 @@ ADD ./setup.sh /build/setup.sh
 RUN chmod +x /build/setup.sh
 RUN /build/setup.sh
 
-COPY ./bashrc /home/user/.bashrc
-
-CMD /usr/sbin/sshd -D
+COPY ./bashrc /home/vagrant/.bashrc
