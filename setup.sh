@@ -1,7 +1,10 @@
 #! /bin/bash
 
-dnf install -y golang gdb tmux openssh-server sudo
-dnf clean all
+yum install -y gdb tmux openssh-server sudo curl which gcc
+yum clean all
 
-mkdir -p /home/vagrant/go
+mkdir -p /home/vagrant/go /usr/local
 chown vagrant: /home/vagrant/go
+
+curl -o /tmp/golang.tar.gz https://storage.googleapis.com/golang/go1.6.3.linux-amd64.tar.gz
+tar -C /usr/local -xzf /tmp/golang.tar.gz

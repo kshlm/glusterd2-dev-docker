@@ -1,4 +1,4 @@
-FROM kshlm/vagrant-fedora:latest
+FROM kshlm/vagrant-centos:latest
 
 MAINTAINER Kaushal M <kshlmster@gmail.com>
 
