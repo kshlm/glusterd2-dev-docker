@@ -8,4 +8,4 @@ ADD ./setup.sh /build/setup.sh
 RUN chmod +x /build/setup.sh
 RUN /build/setup.sh
 
-COPY ./bashrc /home/vagrant/.bashrc
+COPY ./gopath.sh /etc/profile.d/gopath.sh
