@@ -2,10 +2,8 @@ FROM kshlm/vagrant-centos:latest
 
 MAINTAINER Kaushal M <kshlmster@gmail.com>
 
-RUN mkdir -p /build
-ADD ./setup.sh /build/setup.sh
+ADD ./setup.sh /setup.sh
+RUN chmod +x /setup.sh
+RUN /setup.sh
+RUN rm /setup.sh
 
-RUN chmod +x /build/setup.sh
-RUN /build/setup.sh
-
-COPY ./gopath.sh /etc/profile.d/gopath.sh
