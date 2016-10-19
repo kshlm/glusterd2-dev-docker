@@ -29,6 +29,7 @@ EOF
 chmod +x ${GOPATH_PROFILE}
 
 #Install GlusterFS
+yum install -y centos-release-gluster
 yum install -y glusterfs-server
 
 # Setup BASH prompt to show container IPs
